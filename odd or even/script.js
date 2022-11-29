@@ -14,16 +14,19 @@ start.addEventListener('click', function(){
     const randomValue = Math.floor(Math.random()*5 + 1);
     const userNumber = parseInt(document.getElementById('user-number-input').value);
     const sum = randomValue + userNumber;
+    let resulte = "";
 
     console.log(userNumber);
     if (!(userNumber>0 && userNumber<=5)){
-        document.getElementById('answer').innerHTML = 'per favore inserisci un numero compreso fra 1 e 5';
+        resulte = 'per favore inserisci un numero compreso fra 1 e 5';
     } else if ((document.getElementById('odd').checked && isOdd(sum)) || (document.getElementById('even').checked && !isOdd(sum))){
         console.log('oh yeah');
-        document.getElementById('answer').innerHTML = 'complimenti hai vinto!';
+        resulte = 'complimenti hai vinto!';
     } else {
-        document.getElementById('answer').innerHTML = 'mi spiace ma hai perso :P';
+        resulte = 'mi spiace ma hai perso :P';
     }
+    document.getElementById('random-generated').innerHTML = "ho generato il numero " + randomValue;
+    document.getElementById('answer').innerHTML = resulte;
 });
 
 

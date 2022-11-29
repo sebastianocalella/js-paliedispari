@@ -1,7 +1,5 @@
 const randomValue = Math.floor(Math.random()*5 + 1);
 
-console.log(randomValue);
-
 const start = document.getElementById('play');
 
 function isOdd(number){
@@ -10,6 +8,15 @@ function isOdd(number){
     }
     return false
 }
+
+const example = 4;
+const sum = randomValue + example;
+const isoddtest = isOdd(sum);
+
+console.log(randomValue);
+console.log(example);
+console.log(sum);
+console.log(isoddtest);
 
 
 

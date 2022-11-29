@@ -14,7 +14,7 @@ const answer = checkPalindrome(userWord);
 
 console.log(answer);
 
-const userWordDom = document.querySelector('js-content');
+const userWordDom = document.querySelector('.js-content');
 const userWordElement = document.createElement("span");
 userWordElement.innerHTML = answer;
 userWordDom.append(userWordElement);

@@ -1,9 +1,9 @@
 const userWord = prompt('inserire una parola per verificare se sia palindroma');
 
 function checkPalindrome(word){
-    const lenght = word.lenght;
-    for (let i=0; i<lenght/2 ;i++){
-        if (word[i] !== word[lenght - 1 - i]){
+    const length = word.length;
+    for (let i=0; i<length/2 ;i++){
+        if (word[i] !== word[length - (i+1)]){
             return 'la parola inserita non è palindroma';
         }
     }

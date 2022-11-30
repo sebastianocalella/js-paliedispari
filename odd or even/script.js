@@ -19,8 +19,9 @@ start.addEventListener('click', function(){
     console.log(userNumber);
     if (!(userNumber>0 && userNumber<=5)){
         resulte = 'per favore inserisci un numero compreso fra 1 e 5';
-    } else if ((document.getElementById('odd').checked && isOdd(sum)) || (document.getElementById('even').checked && !isOdd(sum))){
-        console.log('oh yeah');
+    } else if (document.getElementById('odd').checked && isOdd(sum)){
+        resulte = 'complimenti hai vinto!';
+    } else if(document.getElementById('even').checked && !isOdd(sum)){
         resulte = 'complimenti hai vinto!';
     } else {
         resulte = 'mi spiace ma hai perso :P';

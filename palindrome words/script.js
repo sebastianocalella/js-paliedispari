@@ -4,10 +4,10 @@ function checkPalindrome(word){
     const length = word.length;
     for (let i=0; i<length/2 ;i++){
         if (word[i] !== word[length - (i+1)]){
-            return false; 'la parola inserita non è palindroma'
+            return false;
         }
     }
-    return true; 'la parola inserita è palindroma!'
+    return true;
 }
 
 const answer = checkPalindrome(userWord) ? 'la parola è palindroma' : 'la parola non è palindroma';
